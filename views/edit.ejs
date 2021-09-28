@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime to edit!</title>
+  </head>
+  <body>
+    <h1>Edit your selected anime!</h1>
+    <form  action="/anime" method="POST">
+      Name: <input type="text" name="name">
+      <br>
+      Rate this anime!
+              <br>
+              1 <input type="radio" name="rating" value="1">
+              <br>
+              2 <input type="radio" name="rating" value="2">
+              <br>
+              3 <input type="radio" name="rating" value="3">
+              <br>
+              4 <input type="radio" name="rating" value="4">
+              <br>
+              5 <input type="radio" name="rating" value="5">
+      <br>
+      Favorite Character: <input type="text" name="favoriteCharacter">
+      <br>
+      Genre: <input type="text" name="genre">
+      <br>
+      Would watch again: <input type="checkbox" name="watchAgain">
+      <br>
+      <input type="submit" value="Edit Anime">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Anime List</title>
+  </head>
+  <body>
+    <h1>My Favorite Anime!</h1>
+    <ul>
+        <% for (let i = 0; i < anime.length; i++) { %>
+      <li>
+        <a href="/anime/<%=anime[i].id%>"><%=anime[i].name%></a>
+        <form action="/anime/<%= anime[i].id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete">
+        </form>
+        <a href="/anime/<%=anime[i].id%>/edit"><button type="button">Edit</button></a>
+      </li>
+      <% } %>
+    </ul>
+    <a href="anime/new">Add a new Anime</a>
+  </body>
+</html>
