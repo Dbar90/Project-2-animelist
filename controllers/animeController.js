@@ -44,15 +44,19 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  req.body.watchAgain = (req.body.watchAgain === "on")
+  req.body.watchAgain = (req.body.watchAgain === 'on')
   Anime.findByIdAndUpdate(
     req.params.id,
     req.body,
-    {new: true}
-  ),
+    {new: true},
   (err, updatedAnime) => {
-    res.redirect('/anime')
-  }
+    if (err) {
+      console.log(err)
+      res.send(err)
+    } else {
+      res.redirect('/anime')
+    }
+  })
 })
 
 module.exports = router

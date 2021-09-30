@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%=anime.name%> Page</title>
-  </head>
-  <body>
+<%- include('./partials/header.ejs') %>
+  <div class="container">
     <h1><%=anime.name%> Page</h1>
     <p>I give this anime a rating of <%=anime.rating%>!</p>
     <p>My favorite character is <%=anime.favoriteCharacter%>!</p>
@@ -13,6 +9,7 @@
     <%  } else { %>
       <p>I would unfortunately not watch <%=anime.name%> again...</p>
     <% } %>
-    <a href="/anime">Back to favorite anime home!</a>
+    <a href="/anime/<%=anime.id%>/edit"><input type="submit" value="Edit"></a>
+    </div>
   </body>
 </html>

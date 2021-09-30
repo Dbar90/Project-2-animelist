@@ -1,32 +1,59 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Anime to edit!</title>
-  </head>
-  <body>
-    <h1>Edit your selected anime!</h1>
-    <form  action="/anime" method="POST">
-      Name: <input type="text" name="name">
+<%- include('./partials/header.ejs') %>
+  <div class="container">
+    <h1>Edit <%= anime.name%>!</h1>
+    <form action="/anime/<%= anime.id %>?_method=PUT" method="POST">
+      Name: <input class="form-control mr-sm-2" type="text" name="name" value="<%= anime.name %>">
+      <br>
+      Favorite Character: <input class="form-control mr-sm-2" type="text" name="favoriteCharacter" value="<%= anime.favoriteCharacter %>">
+      <br>
+      Genre: <input class="form-control mr-sm-2" type="text" name="genre" value="<%= anime.genre %>">
       <br>
       Rate this anime!
-              <br>
-              1 <input type="radio" name="rating" value="1">
-              <br>
-              2 <input type="radio" name="rating" value="2">
-              <br>
-              3 <input type="radio" name="rating" value="3">
-              <br>
-              4 <input type="radio" name="rating" value="4">
-              <br>
-              5 <input type="radio" name="rating" value="5">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+<input type="radio" class="btn-check" name="rating" id="btnradio1" autocomplete="off" value="1"
+<% if (anime.rating === 1) { %>
+   <%="checked" %>
+   <% } %>
+   >
+<label class="btn btn-outline-primary" for="btnradio1">1</label>
+
+<input type="radio" class="btn-check" name="rating" id="btnradio2" autocomplete="off" value="2"
+<% if (anime.rating === 2) { %>
+   <%="checked" %>
+   <% } %>
+   >
+<label class="btn btn-outline-primary" for="btnradio2">2</label>
+
+<input type="radio" class="btn-check" name="rating" id="btnradio3" autocomplete="off" value="3"
+<% if (anime.rating === 3) { %>
+   <%="checked" %>
+   <% } %>
+   >
+<label class="btn btn-outline-primary" for="btnradio3">3</label>
+
+<input type="radio" class="btn-check" name="rating" id="btnradio4" autocomplete="off" value="4"
+<% if (anime.rating === 4) { %>
+   <%="checked" %>
+   <% } %>
+   >
+<label class="btn btn-outline-primary" for="btnradio4">4</label>
+
+<input type="radio" class="btn-check" name="rating" id="btnradio5" autocomplete="off" value="5"
+<% if (anime.rating === 5) { %>
+   <%="checked" %>
+   <% } %>
+   >
+<label class="btn btn-outline-primary" for="btnradio5">5</label>
+</div>
       <br>
-      Favorite Character: <input type="text" name="favoriteCharacter">
+      Would watch again: <input type="checkbox" name="watchAgain"
+      <% if (anime.watchAgain) { %>
+          checked
+          <% } %>
+        >
       <br>
-      Genre: <input type="text" name="genre">
-      <br>
-      Would watch again: <input type="checkbox" name="watchAgain">
-      <br>
-      <input type="submit" value="Edit Anime">
+      <input type="submit" value="Modify Anime">
     </form>
+    </div>
   </body>
 </html>

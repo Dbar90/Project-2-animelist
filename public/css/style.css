@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.btn-toolbar {
+  justify-content: center;
+}
+
+body {
+  background-image: url('/images/goku.jpg');
+  background-size: 100%;
+}
+
+.btn-group {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.name {
+  font-size: 30px;
+  text-shadow: 0px 0px 10px yellow;
+}
+
+.form-control {
+  font-size: 25px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 45px;
+  text-shadow: 0px 0px 10px yellow
+}
+
+.favcharacter {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px yellow
+}
+
+.genre {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px yellow
+}
+
+.rating {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px yellow
+}
+
+.watchagain {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px yellow
+}
+
+input {
+  font-family: 'Gemunu Libre', sans-serif;
+}
+
+.form-check-input {
+  background-color: yellow;
+}
+
+nav {
+  font-family: 'Gemunu Libre', sans-serif;
+}
+
+.favanime {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 25px;
+}

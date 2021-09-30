@@ -20,6 +20,8 @@ db.on('error', (err) => { console.log('ERROR: ', err) })
 db.on('connected', () => { console.log('mongo connected') })
 db.on('disconnected', () => { console.log('mongo disconnected')})
 
+app.use(express.static('public'))
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/Anime', animeController)
