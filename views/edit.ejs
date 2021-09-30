@@ -2,13 +2,13 @@
   <div class="container">
     <h1>Edit <%= anime.name%>!</h1>
     <form action="/anime/<%= anime.id %>?_method=PUT" method="POST">
-      Name: <input class="form-control mr-sm-2" type="text" name="name" value="<%= anime.name %>">
+      <div class="name">Name: <input class="form-control mr-sm-2" type="text" name="name" value="<%= anime.name %>"></div>
       <br>
-      Favorite Character: <input class="form-control mr-sm-2" type="text" name="favoriteCharacter" value="<%= anime.favoriteCharacter %>">
+      <div class="favcharacter">Favorite Character: <input class="form-control mr-sm-2" type="text" name="favoriteCharacter" value="<%= anime.favoriteCharacter %>"></div>
       <br>
-      Genre: <input class="form-control mr-sm-2" type="text" name="genre" value="<%= anime.genre %>">
+      <div class="genre">Genre: <input class="form-control mr-sm-2" type="text" name="genre" value="<%= anime.genre %>"></div>
       <br>
-      Rate this anime!
+      <div class="rating">Rate this anime!</div>
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 <input type="radio" class="btn-check" name="rating" id="btnradio1" autocomplete="off" value="1"
 <% if (anime.rating === 1) { %>
@@ -46,11 +46,11 @@
 <label class="btn btn-outline-primary" for="btnradio5">5</label>
 </div>
       <br>
-      Would watch again: <input type="checkbox" name="watchAgain"
+      <div class="watchagain">Would watch again: <input class="form-check-input" type="checkbox" name="watchAgain"
       <% if (anime.watchAgain) { %>
           checked
           <% } %>
-        >
+        ></div>
       <br>
       <input type="submit" value="Modify Anime">
     </form>
