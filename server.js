@@ -16,6 +16,7 @@ mongoose.connect(mongoURI, {
     console.log('database connected')
 })
 
+
 db.on('error', (err) => { console.log('ERROR: ', err) })
 db.on('connected', () => { console.log('mongo connected') })
 db.on('disconnected', () => { console.log('mongo disconnected')})
@@ -25,6 +26,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/Anime', animeController)
+
+app.get('/', (req, res) => {
+  res.redirect('/anime')
+})
 
 app.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`)
