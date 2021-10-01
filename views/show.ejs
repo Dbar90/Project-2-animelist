@@ -5,9 +5,9 @@
     <p>My favorite character is <%=anime.favoriteCharacter%>!</p>
     <p>This anime is an <%=anime.genre%> anime!</p>
     <% if (anime.watchAgain) { %>
-      <p>I would most certainly watch <%=anime.name%> again!</p>
+    <p>I would most certainly watch <%=anime.name%> again!</p>
     <%  } else { %>
-      <p>I would unfortunately not watch <%=anime.name%> again...</p>
+    <p>I would unfortunately not watch <%=anime.name%> again...</p>
     <% } %>
     <a href="/anime/<%=anime.id%>/edit"><input type="submit" value="Modify"></a>
     </div>
