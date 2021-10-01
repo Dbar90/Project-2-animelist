@@ -2,11 +2,11 @@
   <div class="container">
     <h1>Modify <%= anime.name%>!</h1>
     <form action="/anime/<%= anime.id %>?_method=PUT" method="POST">
-      <div class="name">Name: <input class="form-control mr-sm-2" type="text" name="name" value="<%= anime.name %>"></div>
+      <div class="name">Name: <input class="form-control mr-sm-2" type="text" name="name" value="<%= anime.name %>" autocomplete="off"></div>
       <br>
-      <div class="favcharacter">Favorite Character: <input class="form-control mr-sm-2" type="text" name="favoriteCharacter" value="<%= anime.favoriteCharacter %>"></div>
+      <div class="favcharacter">Favorite Character: <input class="form-control mr-sm-2" type="text" name="favoriteCharacter" value="<%= anime.favoriteCharacter %>" autocomplete="off"></div>
       <br>
-      <div class="genre">Genre: <input class="form-control mr-sm-2" type="text" name="genre" value="<%= anime.genre %>"></div>
+      <div class="genre">Genre: <input class="form-control mr-sm-2" type="text" name="genre" value="<%= anime.genre %>" autocomplete="off"></div>
       <br>
       <div class="rating">Rate this anime!</div>
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
