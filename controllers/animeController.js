@@ -31,17 +31,17 @@ router.get('/seed', (req, res) => {
       watchAgain: true
     },
     {
-      name: 'Barakamon',
-      favoriteCharacter: 'Seishu Handa',
-      genre: 'Comedy, Slice of Life',
-      rating: 3,
-      watchAgain: false
+      name: 'Dragon Ball Super',
+      favoriteCharacter: 'Gohan',
+      genre: 'Adventure, Fantasy, Martial Arts',
+      rating: 5,
+      watchAgain: true
     },
     {
-      name: 'Death Note',
-      favoriteCharacter: 'Light Yagami',
-      genre: 'Mystery, Thriller',
-      rating: 4,
+      name: 'Jujutsu Kaisen',
+      favoriteCharacter: 'Satoru Gojo',
+      genre: 'Adventure, Dark Fantasy, Supernatural',
+      rating: 5,
       watchAgain: true
     }
   ], (err, data) => {
